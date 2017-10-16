@@ -9,7 +9,7 @@ import java.awt.*;
 import java.io.FileWriter;
 class G {
     String []flag;//jiazhushi
-    int [][]d;
+    int [][]d;//
     int biaoji;
     List<String> list;
     List<Integer> shortpath;
