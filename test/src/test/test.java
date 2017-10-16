@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.FileWriter;
 class G {
-    String []flag;
+    String []flag;//9
     int [][]d;//
     int biaoji;
     List<String> list;
