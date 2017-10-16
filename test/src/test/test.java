@@ -49,8 +49,13 @@ class pantingTest extends JFrame{
         c = new coordinate[v];
         for (int i = 0; i < v; i++) {
             c[i] = new coordinate();
+<<<<<<< HEAD
             c[i].x = Math.cos(i*2* Math.PI/v)*15*v+17*v;
             c[i].y = Math.sin(i*2* Math.PI/v)*15*v+17*v;
+=======
+            c[i].x = Math.cos(i*2* Math.PI/v)*15*v+20*v;
+            c[i].y = Math.sin(i*2* Math.PI/v)*15*v+20*v;
+>>>>>>> qiangzhehao
         }
     }
     public void paint(Graphics g){
