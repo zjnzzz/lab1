@@ -1,3 +1,4 @@
+//3c
 package test;
 
 import java.io.*;
@@ -22,6 +23,19 @@ class G {
     this.list = list;
     this.shortpath = shortpath;
   }
+    String []flag;
+    int [][]d;
+    int biaoji;
+    List<String> list;
+    List<Integer> shortpath;
+    G(String []flag,int [][]d,int biaoji,List<String> list,List<Integer> shortpath)
+    {
+        this.flag=flag;
+        this.d=d;
+        this.biaoji=biaoji;
+        this.list=list;
+        this.shortpath=shortpath;
+    }
 }
 
 class Coordinate {
@@ -69,7 +83,13 @@ class PantingTest extends JFrame {
     for (int i = 0; i < v; i++) {
       g.drawString(flag[i], (int) c[i].x + 20, (int) c[i].y + 40);
       g.drawOval((int) c[i].x, (int) c[i].y, 80, 80);
-    }
+    void  calCoord(){
+        c = new coordinate[v];
+        for (int i = 0; i < v; i++) {
+            c[i] = new coordinate();
+            c[i].x = Math.cos(i*2* Math.PI/v)*15*v+20*v;
+            c[i].y = Math.sin(i*2* Math.PI/v)*15*v+20*v;
+        }
     for (int i = 0; i < v; i++) {
       for (int j = 0; j < v; j++) {
         if (d[i][j] > 0) {
@@ -88,13 +108,13 @@ class PantingTest extends JFrame {
           int y3 = 0;
           int x4 = 0;
           int y4 = 0;
-          double awrad = Math.atan(length11 / height11); // ¼ýÍ·½Ç¶È
-          double arraowlen11 = Math.sqrt(length11 * length11 + height11 * height11); // ¼ýÍ·µÄ³¤¶È
+          double awrad = Math.atan(length11 / height11); // ç®­å¤´è§’åº¦
+          double arraowlen11 = Math.sqrt(length11 * length11 + height11 * height11); // ç®­å¤´çš„é•¿åº¦
           double[] arrXY11 = rotateVec(x1 - x0, y1 - y0, awrad, true, arraowlen11);
           double[] arrXY21 = rotateVec(x1 - x0, y1 - y0, -awrad, true, arraowlen11);
-          double x311 = x1 - arrXY11[0]; // (x3,y3)ÊÇµÚÒ»¶Ëµã
+          double x311 = x1 - arrXY11[0]; // (x3,y3)æ˜¯ç¬¬ä¸€ç«¯ç‚¹
           double y311 = y1 - arrXY11[1];
-          double x411 = x1 - arrXY21[0]; // (x4,y4)ÊÇµÚ¶þ¶Ëµã
+          double x411 = x1 - arrXY21[0]; // (x4,y4)æ˜¯ç¬¬äºŒç«¯ç‚¹
           double y411 = y1 - arrXY21[1];
           Double x3f = new Double(x311);
           x3 = x3f.intValue();
