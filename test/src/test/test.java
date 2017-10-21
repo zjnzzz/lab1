@@ -1,4 +1,3 @@
-//3c
 package test;
 
 import java.io.*;
@@ -10,7 +9,7 @@ import java.awt.*;
 import javax.swing.*;
 
 class G {
-  String[] flag;// jiazhushi
+  String[] flag;
   int[][] d;
   int biaoji;
   List<String> list;
