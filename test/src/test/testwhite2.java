@@ -7,23 +7,19 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class testqueryBridgeWords {
-
+public class testwhite2 {
 
 	@Before
 	public void setUp() throws Exception {
 	}
 
 	@Test
-	public void testqueryBridgeWords() throws Exception {
-		//fail("Not yet implemented");
-		Scanner in = new Scanner(System.in);
-        String file = in.nextLine();
+	public void test() throws Exception{
+		String file="test.txt";
         BufferedReader input = new BufferedReader(new FileReader(file));
         FileWriter output = new FileWriter(("shuchu.txt"));
         String s = input.readLine();
@@ -52,8 +48,13 @@ public class testqueryBridgeWords {
         }
         chuli cl = new chuli(flag, d, list);
         int biaoji=0;
-		String result3 = cl.generateNewText("new and");
-		assertEquals("new it and"+"\n" , result3);
+		//cl.fuzhuqueryBridgeWords("to","qwer");
+		//assertEquals(2 , cl.signal);
+		
+		//String[] result2=cl.queryBridgeWords("to", "seek");
+		//assertEquals(null,result2[0]);
+        String[] result3=cl.queryBridgeWords("to", "out");
+		assertEquals("seek", result3[0]);
 	}
 
 }

@@ -12,7 +12,7 @@ import java.util.Scanner;
 import org.junit.Before;
 import org.junit.Test;
 
-public class testwhite {
+public class testblack1 {
 
 	@Before
 	public void setUp() throws Exception {
@@ -20,7 +20,7 @@ public class testwhite {
 
 	@Test
 	public void test() throws Exception{
-        String file="test.txt";
+		String file="test.txt";
         BufferedReader input = new BufferedReader(new FileReader(file));
         FileWriter output = new FileWriter(("shuchu.txt"));
         String s = input.readLine();
@@ -49,12 +49,8 @@ public class testwhite {
         }
         chuli cl = new chuli(flag, d, list);
         int biaoji=0;
-		cl.fuzhuqueryBridgeWords("to","qwer");
-		assertEquals(2 , cl.signal);
-		//String[] result2=cl.queryBridgeWords("to", "seek");
-		//assertEquals(null,result2[0]);
-		//String[] result3=cl.queryBridgeWords("seek", "out");
-		//assertEquals(null, result3[0]);
+		String result3 = cl.generateNewText("to");
+		assertEquals("to"+"\n", result3);
 	}
 
 }
