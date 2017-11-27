@@ -7,6 +7,28 @@ import java.math.*;
 import javax.swing.*;
 import java.awt.*;
 import java.io.FileWriter;
+import java.util.*;
+class 有向图G {
+    public 有向图G() {
+    }
+
+    public String[] Flag;
+
+    public int[][] d;
+
+    public int Biaoji;
+
+    public List<String> List;
+
+    public int[] shortpath;
+
+    public void Setmap() {
+        // TODO implement here
+    }
+    public void Updatemap() {
+        // TODO implement here
+    }
+}
 class G {
   String []flag;
   int [][]d;
@@ -31,7 +53,7 @@ class pantingTest extends JFrame{
     String []flag;
     int [][]d;
     List<String> list;
-  List<Integer> shortpath;
+    List<Integer> shortpath;
     int biaoji;
     pantingTest(int n,String[]flag,int [][]d,List<String> list,int biaoji,List<Integer> shortpath){
         super("Test");
